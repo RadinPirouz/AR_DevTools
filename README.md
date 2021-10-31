@@ -2,7 +2,7 @@
 
 AR Community Developer Tools
 
-#requirements : 
+requirements : 
 esx_menu_default
 es_extended Or essentialmode(Persian Base)
 

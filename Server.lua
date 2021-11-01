@@ -4,16 +4,6 @@ WebHook = ""
 ESX = nil
 TriggerEvent("esx:getSharedObject",function(obj) ESX = obj end)
 
-
-RegisterCommand('DevMenu', function(source)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    if xPlayer.permission_level >= Config.DeveloperPermission then
-        TriggerClientEvent('AR_DevTools:OpenMenu',source)
-    else
-        TriggerClientEvent('esx:showNotification', xPlayer.source, "~r~ Shoma Be In Command Dastresi Nadarid")
-    end
-end)
-
 RegisterNetEvent("AR_DevTools:SendCoords")
 AddEventHandler("AR_DevTools:SendCoords",function(coords)
     PerformHttpRequest(WebHook, function() end, "POST", 
@@ -37,12 +27,10 @@ AddEventHandler("AR_DevTools:AddGun",function()
 end)
 ESX.RegisterServerCallback('AR_DevTools:CheakPermission', function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
-    local temp = xPlayer.permission_level >= Config.DeveloperPermission
-    
-    if temp then
+    local IsDeveloper = xPlayer.permission_level >= Config.DeveloperPermission
+    if IsDeveloper then
         cb(true)
     else
-        DropPlayer(source,"Dont Use Cheat")
         cb(false)
     end
     

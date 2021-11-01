@@ -20,14 +20,16 @@ local speeds = {
     [6] = "Extremely Fast v2.0",
     [7] = "Max Speed"
 }
-RegisterNetEvent("AR_DevTools:OpenMenu")
-AddEventHandler("AR_DevTools:OpenMenu",function()
+RegisterCommand('DevMenu', function(source)
     ESX.TriggerServerCallback('AR_DevTools:CheakPermission', function(callback)
         if callback then
             OpenMenuDev()
+        else
+            notify("~y~ Shoma Dastresi Be In Command Nadarid")
         end
     end)
 end)
+
 function OpenMenuDev()
     ESX.UI.Menu.CloseAll()
     ESX.UI.Menu.Open(

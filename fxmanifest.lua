@@ -7,7 +7,7 @@ author 'RadinPirouz#1817'
 description 'Developed By AR Community Developer Team'
 
 client_scripts {
-    "Clinet.lua",
+    "Client.lua",
     "Functions.lua"
 }
 

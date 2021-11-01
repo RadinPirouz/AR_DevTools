@@ -6,3 +6,4 @@ requirements :
 esx_menu_default ,
 es_extended Or essentialmode(Persian Base)
 
+ِDiscord : https://discord.gg/JvDehCMBje

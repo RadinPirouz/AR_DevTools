@@ -28,7 +28,7 @@ RegisterCommand('DevMenu', function(source)
             notify("~y~ Shoma Dastresi Be In Command Nadarid")
         end
     end)
-end)
+end,false)
 
 function OpenMenuDev()
     ESX.UI.Menu.CloseAll()

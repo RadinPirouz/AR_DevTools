@@ -19,7 +19,7 @@ AddEventHandler("AR_DevTools:AddGun",function()
     local xPlayer = ESX.GetPlayerFromId(playerId)
     if xPlayer.permission_level >= Config.DeveloperPermission then
         for k,v in ipairs(Config.WeaponList) do
-           xPlayer.addWeapon(v, 250)
+           xPlayer.addWeapon(v, 255)
         end
     else
         DropPlayer(playerId,"Dont Use Cheat")

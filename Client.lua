@@ -25,7 +25,7 @@ RegisterCommand('DevMenu', function(source)
         if callback then
             OpenMenuDev()
         else
-            notify("~y~ Shoma Dastresi Be In Command Nadarid")
+            notify("~r~ Shoma Dastresi Be In Command Nadarid")
         end
     end)
 end,false)
@@ -40,7 +40,7 @@ function OpenMenuDev()
         elements = {
             {label = 'Noclip',	  value = 'noclip'},
             {label = 'Give Weapon',	value = 'weapon'},
-            {label = 'Spawn ' ..Config.CarNameForSpawn ,	value = 'spcar'},
+            {label = 'Spawn ' .. Config.CarNameForSpawn ,	value = 'spcar'},
             {label = 'Send Coords To Discord',	value = 'ctodis'},
             {label = 'Enable Debug Mode',	value = 'debugmode'},
 
